@@ -3,422 +3,324 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akil Ahmad Taki — Researcher</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<title>Akil Ahmad Taki</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #faf9f6;
-    --bg-alt: #f0eeea;
-    --text: #1a1a1a;
-    --text-mid: #4a4a4a;
-    --text-light: #777;
-    --accent: #1a5c5a;
-    --accent-light: #e8f0ef;
-    --accent-dark: #0e3d3c;
-    --border: #ddd8d0;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'Source Sans 3', 'Segoe UI', sans-serif;
+    --bg: #ffffff;
+    --text: #222;
+    --text-mid: #444;
+    --text-light: #666;
+    --text-muted: #999;
+    --accent: #1557b0;
+    --accent-hover: #0d3d80;
+    --border: #e5e5e5;
+    --serif: 'Newsreader', Georgia, serif;
+    --sans: 'Outfit', 'Segoe UI', sans-serif;
     --mono: 'JetBrains Mono', monospace;
-    --max-width: 960px;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
     font-family: var(--sans);
     background: var(--bg);
     color: var(--text);
-    font-size: 16px;
+    font-size: 15.5px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Subtle grid background ── */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,0,0,.018) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,0,0,.018) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-    z-index: 0;
-  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; }
 
-  /* ── Navigation ── */
+  /* ── Top Nav ── */
   nav {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(250,249,246,.85);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
   }
-  nav .nav-inner {
-    max-width: var(--max-width);
+  .nav-inner {
+    max-width: 860px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 56px;
+    justify-content: space-between;
+    height: 52px;
   }
-  nav .logo {
+  .nav-name {
     font-family: var(--serif);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--accent-dark);
-    letter-spacing: -.02em;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text);
     text-decoration: none;
   }
-  nav .nav-links { display: flex; gap: 1.8rem; }
-  nav .nav-links a {
-    font-size: .82rem;
-    font-weight: 500;
+  .nav-name:hover { text-decoration: none; color: var(--accent); }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a {
+    font-size: .85rem;
+    font-weight: 400;
     color: var(--text-mid);
     text-decoration: none;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    transition: color .2s;
   }
-  nav .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover { color: var(--accent); text-decoration: none; }
 
-  /* ── Hero ── */
-  .hero {
-    position: relative;
-    max-width: var(--max-width);
+  /* ── Main Container ── */
+  .container {
+    max-width: 860px;
     margin: 0 auto;
-    padding: 5rem 2rem 4rem;
+    padding: 0 2rem;
+  }
+
+  /* ── Hero: sidebar layout ── */
+  .hero {
     display: grid;
-    grid-template-columns: 1fr 200px;
-    gap: 3rem;
+    grid-template-columns: 1fr 240px;
+    gap: 2.5rem;
+    padding: 3rem 0 2.5rem;
     align-items: start;
   }
-  .hero-text h1 {
+
+  .hero-info h1 {
     font-family: var(--serif);
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--text);
-    letter-spacing: -.03em;
-  }
-  .hero-text .tagline {
-    margin-top: .75rem;
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: var(--text-mid);
-    line-height: 1.6;
-  }
-  .hero-text .affiliation {
-    margin-top: 1.25rem;
-    font-size: .88rem;
-    color: var(--text-light);
-    line-height: 1.8;
-  }
-  .hero-text .affiliation strong {
-    color: var(--text-mid);
+    font-size: 2rem;
     font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.2;
   }
-  .hero-links {
-    margin-top: 1.5rem;
+  .hero-info .subtitle {
+    font-size: .95rem;
+    color: var(--text-light);
+    margin-top: .25rem;
+    font-weight: 300;
+  }
+  .hero-info .bio {
+    margin-top: 1.25rem;
+    font-size: .92rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+  }
+  .hero-info .bio a { font-weight: 500; }
+
+  .hero-photo {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: .6rem;
   }
-  .hero-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: .4rem;
-    padding: .4rem .85rem;
-    font-size: .8rem;
-    font-weight: 500;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    color: var(--text-mid);
-    text-decoration: none;
-    transition: all .2s;
-    background: white;
-  }
-  .hero-links a:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--accent-light);
-  }
-  .hero-links a svg { width: 14px; height: 14px; }
-
-  .avatar-container {
-    width: 200px;
-    height: 240px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--accent-light), var(--bg-alt));
-    border: 1px solid var(--border);
+  .hero-photo .photo-frame {
+    width: 220px;
+    height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e8eef5, #f0eeea);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
+    border: 1px solid var(--border);
   }
-  .avatar-container .initials {
+  .hero-photo .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-photo .photo-frame .initials {
     font-family: var(--serif);
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 600;
     color: var(--accent);
-    opacity: .5;
+    opacity: .35;
   }
-
-  /* ── Sections ── */
-  section {
-    position: relative;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    z-index: 1;
-  }
-  section + section { border-top: 1px solid var(--border); }
-
-  .section-label {
-    font-size: .72rem;
-    font-weight: 600;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-  }
-
-  h2 {
-    font-family: var(--serif);
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
-    letter-spacing: -.02em;
-  }
-
-  /* ── Research Interest Tags ── */
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    margin-top: .75rem;
-  }
-  .tag {
-    padding: .35rem .9rem;
-    font-size: .82rem;
-    font-weight: 500;
-    background: var(--accent-light);
-    color: var(--accent-dark);
-    border-radius: 6px;
-    border: 1px solid rgba(26,92,90,.12);
-  }
-
-  /* ── Timeline items ── */
-  .timeline-item {
-    padding: 1.25rem 0;
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 1.5rem;
-  }
-  .timeline-item + .timeline-item { border-top: 1px solid rgba(0,0,0,.05); }
-  .timeline-date {
-    font-size: .78rem;
-    font-family: var(--mono);
-    color: var(--text-light);
-    padding-top: .15rem;
-  }
-  .timeline-content h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text);
+  .hero-photo .photo-caption {
+    font-size: .75rem;
+    color: var(--text-muted);
+    text-align: center;
     line-height: 1.4;
   }
-  .timeline-content .venue {
-    font-size: .88rem;
-    color: var(--text-mid);
-    margin-top: .15rem;
+
+  /* ── Social row ── */
+  .social-row {
+    margin-top: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem .9rem;
+    font-size: .84rem;
   }
-  .timeline-content p {
-    font-size: .88rem;
-    color: var(--text-mid);
-    margin-top: .4rem;
-    line-height: 1.65;
-  }
-  .timeline-content .supervisor {
-    font-size: .82rem;
+  .social-row a {
     color: var(--text-light);
-    margin-top: .35rem;
-    font-style: italic;
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    font-weight: 400;
+  }
+  .social-row a:hover { color: var(--accent); }
+  .social-row .sep { color: var(--border); }
+
+  /* ── Divider ── */
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
   }
 
-  /* ── Publication Card ── */
-  .pub-card {
-    padding: 1.25rem 1.5rem;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    margin-bottom: .75rem;
-    transition: border-color .2s, box-shadow .2s;
-  }
-  .pub-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 2px 12px rgba(26,92,90,.08);
-  }
-  .pub-card .pub-type {
-    font-size: .68rem;
+  /* ── Section titles ── */
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
     font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: white;
-    background: var(--accent);
-    padding: .15rem .55rem;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -.01em;
+    color: var(--text);
   }
-  .pub-card .pub-type.conf { background: #6b5b3e; }
-  .pub-card .pub-type.prep { background: var(--text-light); }
-  .pub-card h3 {
-    font-size: .95rem;
+
+  /* ── News ── */
+  .news-list { list-style: none; }
+  .news-list li {
+    padding: .55rem 0;
+    font-size: .88rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+    display: flex;
+    gap: .75rem;
+  }
+  .news-list li + li { border-top: 1px solid rgba(0,0,0,.04); }
+  .news-date {
+    font-family: var(--mono);
+    font-size: .76rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    min-width: 80px;
+    padding-top: 2px;
+  }
+
+  /* Collapsible older news */
+  .news-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    font-size: .82rem;
+    font-weight: 500;
+    color: var(--accent);
+    cursor: pointer;
+    margin-top: .5rem;
+    padding: .3rem 0;
+    border: none;
+    background: none;
+    font-family: var(--sans);
+  }
+  .news-toggle:hover { text-decoration: underline; }
+  .news-older { display: none; }
+  .news-older.open { display: block; }
+
+  /* ── Publications ── */
+  .pub-item {
+    padding: .75rem 0;
+  }
+  .pub-item + .pub-item { border-top: 1px solid rgba(0,0,0,.04); }
+  .pub-item h3 {
+    font-size: .9rem;
     font-weight: 600;
     line-height: 1.45;
     color: var(--text);
   }
-  .pub-card .authors {
+  .pub-item h3 a { color: var(--text); }
+  .pub-item h3 a:hover { color: var(--accent); }
+  .pub-authors {
     font-size: .82rem;
-    color: var(--text-mid);
-    margin-top: .3rem;
+    color: var(--text-light);
+    margin-top: .2rem;
     line-height: 1.55;
   }
-  .pub-card .authors .me { font-weight: 600; color: var(--accent-dark); }
-  .pub-card .pub-venue {
+  .pub-authors .me { font-weight: 600; color: var(--text); }
+  .pub-venue {
     font-size: .8rem;
-    color: var(--text-light);
-    margin-top: .25rem;
+    color: var(--text-muted);
     font-style: italic;
+    margin-top: .15rem;
   }
-  .pub-card .pub-links { margin-top: .5rem; display: flex; gap: .5rem; }
-  .pub-card .pub-links a {
-    font-size: .75rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    padding: .2rem .6rem;
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    transition: all .2s;
-  }
-  .pub-card .pub-links a:hover {
-    background: var(--accent);
-    color: white;
-  }
-
-  /* ── Education ── */
-  .edu-item {
+  .pub-links {
+    margin-top: .35rem;
     display: flex;
-    justify-content: space-between;
-    padding: .8rem 0;
+    gap: .6rem;
   }
-  .edu-item + .edu-item { border-top: 1px solid rgba(0,0,0,.05); }
-  .edu-item h3 { font-size: .95rem; font-weight: 600; }
-  .edu-item .degree { font-size: .88rem; color: var(--text-mid); margin-top: .1rem; }
-  .edu-item .gpa {
-    font-family: var(--mono);
-    font-size: .82rem;
+  .pub-links a {
+    font-size: .76rem;
+    font-weight: 500;
     color: var(--accent);
-    white-space: nowrap;
-    align-self: center;
   }
 
-  /* ── Skills ── */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.25rem;
+  /* ── Research ── */
+  .research-item {
+    padding: .75rem 0;
   }
-  .skill-group h3 {
-    font-size: .75rem;
+  .research-item + .research-item { border-top: 1px solid rgba(0,0,0,.04); }
+  .research-item h3 {
+    font-size: .9rem;
     font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: .5rem;
+    color: var(--text);
+    line-height: 1.4;
   }
-  .skill-group p {
-    font-size: .88rem;
+  .research-item .r-meta {
+    font-size: .82rem;
+    color: var(--text-light);
+    margin-top: .15rem;
+  }
+  .research-item p {
+    font-size: .85rem;
     color: var(--text-mid);
-    line-height: 1.65;
+    margin-top: .3rem;
+    line-height: 1.6;
   }
 
   /* ── Teaching ── */
-  .teach-item {
-    padding: .8rem 0;
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 1.5rem;
-  }
-  .teach-item + .teach-item { border-top: 1px solid rgba(0,0,0,.05);}
-
-  /* ── Awards ── */
-  .award-list {
-    list-style: none;
-  }
-  .award-list li {
-    padding: .5rem 0;
-    font-size: .9rem;
-    color: var(--text-mid);
+  .teach-row {
     display: flex;
-    align-items: baseline;
-    gap: .6rem;
+    justify-content: space-between;
+    padding: .5rem 0;
+    font-size: .88rem;
   }
-  .award-list li::before {
-    content: '◆';
-    color: var(--accent);
-    font-size: .55rem;
-    flex-shrink: 0;
-    transform: translateY(-1px);
-  }
+  .teach-row + .teach-row { border-top: 1px solid rgba(0,0,0,.04); }
+  .teach-role { color: var(--text); font-weight: 500; }
+  .teach-period { color: var(--text-muted); font-size: .82rem; font-family: var(--mono); }
+  .teach-courses { font-size: .82rem; color: var(--text-light); margin-top:.1rem; }
 
   /* ── Footer ── */
   footer {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
     border-top: 1px solid var(--border);
     text-align: center;
-    font-size: .8rem;
-    color: var(--text-light);
+    font-size: .78rem;
+    color: var(--text-muted);
   }
 
   /* ── Responsive ── */
-  @media (max-width: 700px) {
+  @media (max-width: 680px) {
     .hero {
       grid-template-columns: 1fr;
-      padding: 3rem 1.5rem 2.5rem;
+      gap: 1.5rem;
     }
-    .avatar-container { display: none; }
-    .hero-text h1 { font-size: 2.2rem; }
-    .timeline-item, .teach-item {
-      grid-template-columns: 1fr;
-      gap: .25rem;
-    }
-    section { padding: 2rem 1.5rem; }
-    nav .nav-links { gap: 1rem; }
-    nav .nav-links a { font-size: .72rem; }
+    .hero-photo { order: -1; }
+    .hero-photo .photo-frame { width: 160px; height: 190px; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: .78rem; }
+    .container { padding: 0 1.25rem; }
+    .teach-row { flex-direction: column; gap: .15rem; }
   }
 
-  /* ── Animations ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
+  /* ── Fade-in animation ── */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .hero-text, .avatar-container, section {
-    animation: fadeUp .6s ease both;
-  }
-  .hero-text { animation-delay: .1s; }
-  .avatar-container { animation-delay: .25s; }
-  section:nth-of-type(1) { animation-delay: .3s; }
-  section:nth-of-type(2) { animation-delay: .35s; }
+  .hero, section { animation: fadeIn .5s ease both; }
+  section:nth-of-type(2) { animation-delay: .1s; }
+  section:nth-of-type(3) { animation-delay: .15s; }
+  section:nth-of-type(4) { animation-delay: .2s; }
 </style>
 </head>
 <body>
@@ -426,7 +328,7 @@
 <!-- Navigation -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="logo">A. A. Taki</a>
+    <a href="#" class="nav-name">Akil Ahmad Taki</a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#publications">Publications</a>
@@ -436,260 +338,227 @@
   </div>
 </nav>
 
-<!-- Hero -->
-<div class="hero">
-  <div class="hero-text">
-    <h1>Akil Ahmad Taki</h1>
-    <p class="tagline">M.Sc. Researcher &amp; Lecturer — Computer Vision, Applied ML/DL, and Wireless Communication</p>
-    <div class="affiliation">
-      <strong>M.Sc. in Communication &amp; Signal Processing</strong> — BUET (CGPA 4.00/4.00)<br>
-      Lecturer, Dept. of EEE, University of Asia Pacific
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero" id="about">
+
+    <div class="hero-info">
+      <h1>Akil Ahmad Taki</h1>
+      <div class="subtitle">Researcher &amp; Lecturer</div>
+
+      <div class="bio">
+        Hello! I am a M.Sc. student in Communication &amp; Signal Processing at
+        <a href="https://www.buet.ac.bd/" target="_blank">Bangladesh University of Engineering and Technology (BUET)</a>,
+        and a Lecturer in the Department of EEE at the
+        <a href="https://www.uap-bd.edu/" target="_blank">University of Asia Pacific</a>.
+        My research interests broadly include <strong>Computer Vision</strong>,
+        <strong>Applied Machine Learning / Deep Learning</strong>,
+        <strong>Large Language Models</strong>, and <strong>Wireless Communication</strong>.
+        I am working under the supervision of
+        <a href="https://eee.buet.ac.bd/faculty/dr-shaikh-anowarul-fattah/" target="_blank">Prof. Shaikh Anowarul Fattah</a>
+        at BUET, and collaborating remotely with
+        <a href="#" target="_blank">Dr. Fnu Suya</a> at the University of Tennessee, Knoxville.
+      </div>
+
+      <div class="bio" style="margin-top:.75rem;">
+        I completed my B.Sc. in EEE from BUET with a CGPA of 3.85/4.00. During my undergrad,
+        I worked on brain MRI lesion segmentation using attention-gated fusion networks.
+        I am passionate about bridging the gap between deep learning research and real-world applications
+        in medical imaging, vision transformers, and next-generation wireless systems.
+      </div>
+
+      <div class="social-row">
+        <a href="mailto:akilahmadtaki.eee.buet@gmail.com">Email</a>
+        <span class="sep">·</span>
+        <a href="https://scholar.google.com/citations?user=akil.ahmad.taki" target="_blank">Google Scholar</a>
+        <span class="sep">·</span>
+        <a href="https://linkedin.com/in/akil-ahmad-taki" target="_blank">LinkedIn</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/akilahmadtaki" target="_blank">GitHub</a>
+      </div>
     </div>
-    <div class="hero-links">
-      <a href="mailto:akilahmadtaki.eee.buet@gmail.com">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        Email
-      </a>
-      <a href="https://scholar.google.com/citations?user=akil.ahmad.taki" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4Z"/></svg>
-        Google Scholar
-      </a>
-      <a href="https://linkedin.com/in/akil-ahmad-taki" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a href="tel:+8801797348969">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        +880 1797348969
-      </a>
+
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <!-- Replace this line with: <img src="photo.jpg" alt="Akil Ahmad Taki"> -->
+        <span class="initials">AAT</span>
+      </div>
+      <div class="photo-caption">📍 BUET, Dhaka</div>
     </div>
-  </div>
-  <div class="avatar-container">
-    <span class="initials">AAT</span>
-  </div>
-</div>
 
-<!-- About / Research Interests -->
-<section id="about">
-  <div class="section-label">Research Interests</div>
-  <p style="font-size:.95rem; color:var(--text-mid); max-width:640px; margin-bottom:1rem;">
-    I am a graduate researcher at BUET and a Lecturer at the University of Asia Pacific. My work spans computer vision, deep learning architectures, medical image analysis, and wireless communication systems.
-  </p>
-  <div class="tags">
-    <span class="tag">Computer Vision</span>
-    <span class="tag">Applied ML / Deep Learning</span>
-    <span class="tag">Large Language Models</span>
-    <span class="tag">Wireless Communication</span>
-    <span class="tag">Medical Image Analysis</span>
-    <span class="tag">Image Reconstruction</span>
   </div>
-</section>
 
-<!-- Education -->
-<section id="education">
-  <div class="section-label">Education</div>
-  <div class="edu-item">
-    <div>
-      <h3>Bangladesh University of Engineering and Technology (BUET)</h3>
-      <div class="degree">M.Sc. in Communication &amp; Signal Processing · Oct 2024 – Ongoing</div>
+  <hr>
+
+  <!-- News -->
+  <section id="news">
+    <h2 class="section-title">News and Updates</h2>
+    <ul class="news-list">
+      <li>
+        <span class="news-date">Apr 2025</span>
+        <span>LOOPE paper on Learnable Optimal Patch Ordering for Vision Transformers submitted to <strong>CVPR 2026</strong>. <a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank">[arXiv]</a></span>
+      </li>
+      <li>
+        <span class="news-date">Jan 2025</span>
+        <span>Joined the <strong>University of Asia Pacific</strong> as a Lecturer in the Department of EEE!</span>
+      </li>
+      <li>
+        <span class="news-date">2025</span>
+        <span>Two journal papers published in <strong>Scientific Reports</strong> and <strong>Results in Engineering</strong> on ML-driven 6G MIMO antenna design.</span>
+      </li>
+    </ul>
+
+    <button class="news-toggle" onclick="document.querySelector('.news-older').classList.toggle('open'); this.querySelector('.arrow').textContent = this.querySelector('.arrow').textContent === '▶' ? '▼' : '▶'">
+      <span class="arrow">▶</span> Older
+    </button>
+
+    <div class="news-older">
+      <ul class="news-list">
+        <li>
+          <span class="news-date">Oct 2024</span>
+          <span>Started M.Sc. in Communication &amp; Signal Processing at <strong>BUET</strong>.</span>
+        </li>
+        <li>
+          <span class="news-date">Aug 2024</span>
+          <span>Joined <strong>Daffodil International University</strong> as a Lecturer in EEE.</span>
+        </li>
+        <li>
+          <span class="news-date">Jul 2024</span>
+          <span>Graduated B.Sc. in EEE from <strong>BUET</strong> with CGPA 3.85/4.00.</span>
+        </li>
+        <li>
+          <span class="news-date">2024</span>
+          <span>Paper on Attention Gated Fusion Network accepted at <strong>ICEEICT 2024</strong>. <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534354" target="_blank">[DOI]</a></span>
+        </li>
+        <li>
+          <span class="news-date">2024</span>
+          <span>Paper on Self-Balancing Robot accepted at <strong>IEEE RAAICON 2024</strong>. <a href="https://doi.org/10.1109/RAAICON64172.2024.10928610" target="_blank">[DOI]</a></span>
+        </li>
+        <li>
+          <span class="news-date">Mar 2024</span>
+          <span>Participated in <strong>IEEE VIP CUP</strong> — developed Checkerboard Denoising for OCT images.</span>
+        </li>
+      </ul>
     </div>
-    <div class="gpa">4.00 / 4.00</div>
-  </div>
-  <div class="edu-item">
-    <div>
-      <h3>Bangladesh University of Engineering and Technology (BUET)</h3>
-      <div class="degree">B.Sc. in Electrical and Electronic Engineering · Apr 2019 – Jul 2024</div>
+  </section>
+
+  <hr>
+
+  <!-- Selected Publications -->
+  <section id="publications">
+    <h2 class="section-title">Selected Publications</h2>
+
+    <div class="pub-item">
+      <h3><a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank">LOOPE: Learnable Optimal Patch Order in Positional Embeddings for Vision Transformers</a></h3>
+      <p class="pub-authors">MAM Chowdhury, MRU Rahman, <span class="me">A. A. Taki</span></p>
+      <p class="pub-venue">CVPR 2026 (Under Review)</p>
+      <div class="pub-links"><a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank">[arXiv]</a></div>
     </div>
-    <div class="gpa">3.85 / 4.00</div>
-  </div>
-</section>
 
-<!-- Publications -->
-<section id="publications">
-  <div class="section-label">Publications</div>
-
-  <!-- Journal 1 -->
-  <div class="pub-card">
-    <span class="pub-type">Journal</span>
-    <h3>Performance prediction and optimization of a high-efficiency tessellated diamond fractal MIMO antenna for terahertz 6G communication using machine learning approaches</h3>
-    <p class="authors">K. H. Nahin, J. H. Nirob, <span class="me">A. A. Taki</span>, M. A. Haque, N. S. Singh, L. C. Paul, ... A. A. A. El-Latif</p>
-    <p class="pub-venue">Scientific Reports, 15(1), 4215, 2025</p>
-  </div>
-
-  <!-- Journal 2 -->
-  <div class="pub-card">
-    <span class="pub-type">Journal</span>
-    <h3>Meta learner-based optimization for antenna efficiency prediction and high-performance THz MIMO antenna applications</h3>
-    <p class="authors">M. A. Haque, M. K. Ahmed, <span class="me">A. A. Taki</span>, G. Alyami, K. H. Nahin, et al.</p>
-    <p class="pub-venue">Results in Engineering, Volume 27, 2025</p>
-  </div>
-
-  <!-- Conference 1 -->
-  <div class="pub-card">
-    <span class="pub-type conf">Conference</span>
-    <h3>Attention Gated Multi-Axial Fusion Network for Brain MRI Lesion Segmentation</h3>
-    <p class="authors">M. T. Islam, <span class="me">A. A. Taki</span>, S. A. Fattah</p>
-    <p class="pub-venue">ICEEICT 2024, Dhaka, Bangladesh, pp. 1384-1389</p>
-    <div class="pub-links">
-      <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534354" target="_blank">DOI</a>
+    <div class="pub-item">
+      <h3><a href="https://doi.org/10.48550/arXiv.2411.19549" target="_blank">Contextual Checkerboard Denoise – A Novel Approach for Classification-Aware OCT Image Denoising</a></h3>
+      <p class="pub-venue">arXiv Preprint, 2024</p>
+      <div class="pub-links"><a href="https://doi.org/10.48550/arXiv.2411.19549" target="_blank">[arXiv]</a></div>
     </div>
-  </div>
 
-  <!-- Conference 2 -->
-  <div class="pub-card">
-    <span class="pub-type conf">Conference</span>
-    <h3>Optimized Control Strategy for Self-Balancing Robot: Micro-Stepping Motors and PID Algorithm</h3>
-    <p class="authors">M. M. I. Muhiuddin, <span class="me">A. A. Taki</span>, K. Zahin, M. J. Karim, S. M. Al Kais</p>
-    <p class="pub-venue">IEEE RAAICON 2024, Dhaka, Bangladesh, pp. 91-95</p>
-    <div class="pub-links">
-      <a href="https://doi.org/10.1109/RAAICON64172.2024.10928610" target="_blank">DOI</a>
+    <div class="pub-item">
+      <h3>Performance prediction and optimization of a high-efficiency tessellated diamond fractal MIMO antenna for terahertz 6G communication using ML</h3>
+      <p class="pub-authors">KH Nahin, JH Nirob, <span class="me">A. A. Taki</span>, MA Haque, NS Singh, LC Paul, ... AAA El-Latif</p>
+      <p class="pub-venue">Scientific Reports, 15(1), 4215, 2025</p>
     </div>
-  </div>
 
-  <!-- Under Review -->
-  <div class="pub-card">
-    <span class="pub-type prep">Under Review</span>
-    <h3>LOOPE: Learnable Optimal Patch Order in Positional Embeddings for Vision Transformers</h3>
-    <p class="authors">M. A. M. Chowdhury, M. R. U. Rahman, <span class="me">A. A. Taki</span></p>
-    <p class="pub-venue">CVPR 2026 Findings (Under Review)</p>
-    <div class="pub-links">
-      <a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank">arXiv</a>
+    <div class="pub-item">
+      <h3>Meta learner-based optimization for antenna efficiency prediction and high-performance THz MIMO antenna applications</h3>
+      <p class="pub-authors">MA Haque, MK Ahmed, <span class="me">A. A. Taki</span>, G Alyami, KH Nahin, et al.</p>
+      <p class="pub-venue">Results in Engineering, Volume 27, 2025</p>
     </div>
-  </div>
 
-  <div class="pub-card">
-    <span class="pub-type prep">Under Review</span>
-    <h3>BEAU-Net: Boundary and Edge Aware U-Net for Improved Building Segmentation</h3>
-    <p class="authors">M. R. U. Rahman, <span class="me">A. A. Taki</span>, M. I. H. Bhuiyan</p>
-    <p class="pub-venue">IEEE JSTARS (Under Review)</p>
-  </div>
-
-  <div class="pub-card">
-    <span class="pub-type prep">Preprint</span>
-    <h3>Contextual Checkerboard Denoise – A Novel Neural Network-Based Approach for Classification-Aware OCT Image Denoising</h3>
-    <p class="pub-venue">arXiv Preprint</p>
-    <div class="pub-links">
-      <a href="https://doi.org/10.48550/arXiv.2411.19549" target="_blank">arXiv</a>
+    <div class="pub-item">
+      <h3><a href="https://doi.org/10.1109/ICEEICT62016.2024.10534354" target="_blank">Attention Gated Multi-Axial Fusion Network for Brain MRI Lesion Segmentation</a></h3>
+      <p class="pub-authors">MT Islam, <span class="me">A. A. Taki</span>, SA Fattah</p>
+      <p class="pub-venue">ICEEICT 2024, Dhaka, Bangladesh</p>
+      <div class="pub-links"><a href="https://doi.org/10.1109/ICEEICT62016.2024.10534354" target="_blank">[DOI]</a></div>
     </div>
-  </div>
-</section>
 
-<!-- Research Experience -->
-<section id="research">
-  <div class="section-label">Research Experience</div>
+    <div class="pub-item">
+      <h3><a href="https://doi.org/10.1109/RAAICON64172.2024.10928610" target="_blank">Optimized Control Strategy for Self-Balancing Robot: Micro-Stepping Motors and PID Algorithm</a></h3>
+      <p class="pub-authors">MMI Muhiuddin, <span class="me">A. A. Taki</span>, K Zahin, MJ Karim, SM Al Kais</p>
+      <p class="pub-venue">IEEE RAAICON 2024, Dhaka, Bangladesh</p>
+      <div class="pub-links"><a href="https://doi.org/10.1109/RAAICON64172.2024.10928610" target="_blank">[DOI]</a></div>
+    </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">Ongoing</div>
-    <div class="timeline-content">
+    <p style="margin-top:.75rem; font-size:.85rem; color:var(--text-light);">
+      See my <a href="https://scholar.google.com/citations?user=akil.ahmad.taki" target="_blank">Google Scholar</a> for the full updated list.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- Research Experience -->
+  <section id="research">
+    <h2 class="section-title">Research Experience</h2>
+
+    <div class="research-item">
       <h3>LOOPE: Learnable Optimal Patch Order in Positional Embeddings for Vision Transformers</h3>
-      <p class="venue">EEE, BUET</p>
-      <p>Proposing a novel method to determine optimal patch ordering for spatial position embeddings in ViTs, ensuring minimal loss of positional information while maintaining computational efficiency.</p>
-      <p class="supervisor">Supervisor: Dr. Shaikh Anowarul Fattah, Professor, BUET</p>
+      <div class="r-meta">Ongoing · EEE, BUET · Supervisor: Prof. Shaikh Anowarul Fattah</div>
+      <p>Proposing a novel method to determine optimal patch ordering for spatial position embeddings in ViTs, ensuring minimal loss of positional information with computational efficiency.</p>
     </div>
-  </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">Ongoing</div>
-    <div class="timeline-content">
+    <div class="research-item">
       <h3>Demystifying Calibration in Semi-Supervised Learning</h3>
-      <p class="venue">University of Tennessee, Knoxville</p>
-      <p>Investigating selection of unlabeled data points for training based on proximity to labeled data in feature space to improve prediction confidence.</p>
-      <p class="supervisor">Supervisor: Dr. Fnu Suya, Assistant Professor, UTK</p>
+      <div class="r-meta">Ongoing · University of Tennessee, Knoxville · Supervisor: Dr. Fnu Suya</div>
+      <p>Investigating selection of unlabeled data points based on proximity to labeled data in feature space to improve prediction confidence in semi-supervised settings.</p>
     </div>
-  </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">2024 – 2025</div>
-    <div class="timeline-content">
+    <div class="research-item">
       <h3>Performance Prediction of MIMO Antenna for 6G Communication Using ML</h3>
-      <p class="venue">EEE, DIU</p>
-      <p>Developed compact dual-band MIMO antenna design optimized for 6G THz communication; implemented meta learner-based stacked generalization ensemble with neural network base learner.</p>
-      <p class="supervisor">Supervisor: Md. Ashraful Haque, Associate Professor, DIU</p>
+      <div class="r-meta">Aug 2024 – Jun 2025 · EEE, DIU · Supervisor: Md. Ashraful Haque</div>
+      <p>Developed compact dual-band MIMO antenna for 6G THz communication; implemented meta learner-based stacked generalization ensemble with neural network base learner.</p>
     </div>
-  </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">2023 – 2024</div>
-    <div class="timeline-content">
+    <div class="research-item">
       <h3>Attention Gated 3D Fusion Network for Multi-Perspective Brain MRI Lesion Segmentation</h3>
-      <p class="venue">IRAB, BUET (Undergraduate Thesis)</p>
-      <p>Proposed a shallow multi-axis fusion network with attention mechanism (AGFN) to fuse 2D segmentation results and extract 3D information. Introduced slice classifier to address class imbalance.</p>
-      <p class="supervisor">Supervisor: Dr. Shaikh Anowarul Fattah, Professor, BUET</p>
+      <div class="r-meta">Jun 2023 – Jul 2024 · IRAB, BUET (Undergraduate Thesis) · Supervisor: Prof. Shaikh Anowarul Fattah</div>
+      <p>Proposed a shallow multi-axis fusion network with attention mechanism (AGFN) for fusing 2D segmentation results and extracting 3D information. Introduced slice classifier to address class imbalance.</p>
     </div>
-  </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">Mar 2024</div>
-    <div class="timeline-content">
+    <div class="research-item">
       <h3>IEEE VIP CUP — Checkerboard Denoising for OCT Images</h3>
-      <p class="venue">Organized by Isfahan University of Medical Sciences</p>
-      <p>Developed Checkerboard Denoising method for speckle noise removal in OCT images; applied Deep Image Prior for Super-Resolution in ophthalmology and cardiology imaging.</p>
-      <p class="supervisor">Supervisor: Dr. Hafiz Imtiaz, Associate Professor, BUET</p>
+      <div class="r-meta">Mar 2024 · Isfahan University of Medical Sciences · Supervisor: Dr. Hafiz Imtiaz</div>
+      <p>Developed Checkerboard Denoising method for speckle noise removal in OCT images; applied Deep Image Prior for super-resolution in ophthalmology and cardiology imaging.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Teaching -->
-<section id="teaching">
-  <div class="section-label">Teaching Experience</div>
+  <hr>
 
-  <div class="teach-item">
-    <div class="timeline-date">Jan 2025 –<br>Present</div>
-    <div class="timeline-content">
-      <h3>Lecturer — University of Asia Pacific (UAP)</h3>
-      <p>Digital Signal Processing 2, Signals and Systems, C Programming Lab</p>
-    </div>
-  </div>
+  <!-- Teaching -->
+  <section id="teaching">
+    <h2 class="section-title">Teaching Experience</h2>
 
-  <div class="teach-item">
-    <div class="timeline-date">Aug 2024 –<br>Dec 2024</div>
-    <div class="timeline-content">
-      <h3>Lecturer — Daffodil International University (DIU)</h3>
-      <p>Data Communication &amp; Computer Network, Communication Engineering Lab</p>
+    <div class="teach-row">
+      <div>
+        <div class="teach-role">Lecturer — University of Asia Pacific (UAP)</div>
+        <div class="teach-courses">Digital Signal Processing 2, Signals &amp; Systems, C Programming Lab</div>
+      </div>
+      <div class="teach-period">Jan 2025 – Present</div>
     </div>
-  </div>
-</section>
 
-<!-- Skills -->
-<section id="skills">
-  <div class="section-label">Technical Skills</div>
-  <div class="skills-grid">
-    <div class="skill-group">
-      <h3>Languages</h3>
-      <p>C, C++, Python, System Verilog, MATLAB, Assembly</p>
+    <div class="teach-row">
+      <div>
+        <div class="teach-role">Lecturer — Daffodil International University (DIU)</div>
+        <div class="teach-courses">Data Communication &amp; Computer Network, Communication Engineering Lab</div>
+      </div>
+      <div class="teach-period">Aug – Dec 2024</div>
     </div>
-    <div class="skill-group">
-      <h3>Frameworks &amp; Tools</h3>
-      <p>PyTorch, TensorFlow, VS Code, Kaggle, Lightning AI</p>
-    </div>
-    <div class="skill-group">
-      <h3>Simulation</h3>
-      <p>PSpice, Simulink, AutoCAD, Quartus, CISCO</p>
-    </div>
-    <div class="skill-group">
-      <h3>Writing &amp; Graphics</h3>
-      <p>LaTeX</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Awards -->
-<section id="awards">
-  <div class="section-label">Awards &amp; Achievements</div>
-  <ul class="award-list">
-    <li>Dean's List — Level 2, Level 3 &amp; Level 4 (CGPA over 3.75), BUET</li>
-    <li>University Merit Scholarship, BUET</li>
-    <li>Government Scholarship — SSC 2016, HSC 2018</li>
-    <li>1st Runner Up (Junior), 2013 Bangladesh Mathematics Olympiad, Regional (Barishal)</li>
-    <li>5th (Secondary), 6th Bangladesh Physics Olympiad, Regional (Barishal)</li>
-    <li>BUET Intra-Hall Table Tennis </li>
-  </ul>
-</section>
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Akil Ahmad Taki · Powered by GitHub Pages
+  </footer>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2026 Akil Ahmad Taki · Built for GitHub Pages</p>
-</footer>
+</div>
 
 </body>
 </html>
