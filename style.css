@@ -144,7 +144,7 @@ nav {
   border-color: var(--accent);
   text-decoration: none;
 }
-.sidebar-social a svg { width: 13px; height: 13px; }
+.sidebar-social a svg { width: 13px; height: 13px; flex-shrink: 0; }
 
 /* Sidebar News */
 .sidebar-news {
