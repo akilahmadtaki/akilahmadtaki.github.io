@@ -102,7 +102,7 @@ nav {
 .sidebar .photo-frame {
   width: 75%;
   margin: 0 auto;
-  aspect-ratio: 1/1;
+  aspect-ratio: 3/4;
   border-radius: 10px;
   overflow: hidden;
   background: transparent;
@@ -160,15 +160,14 @@ nav {
   margin-top: 1rem;
   flex-wrap: wrap;
 }
+/* 
+
+*/
 .sidebar-social a {
   display: inline-flex;
   align-items: center;
-  gap: .3rem;
-  font-size: .78rem;
-  color: var(--text-light);
-  padding: .3rem .6rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  color: var(--text-mid);
+  padding: .4rem;
   transition: all .2s;
 }
 .sidebar-social a:hover {
