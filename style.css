@@ -360,11 +360,15 @@ hr {
 }
 
 /* ── Visitor Map ── */
+/* /* ── Visitor Map ── */
 .visitor-map {
   margin-top: 2.5rem;
   padding: 1.5rem 0;
   text-align: center;
+  width: 100%;
 }
+
+*/
 .visitor-map h3 {
   font-family: var(--serif);
   font-size: 1rem;
