@@ -133,7 +133,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity .8s ease;
+  transition: opacity .02s ease;
 }
 
 .card-thumb.slideshow img.active {
