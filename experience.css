@@ -1,0 +1,124 @@
+/* ══════════════════════════════════════
+   EXPERIENCE PAGE
+   ══════════════════════════════════════ */
+
+.exp-group {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 2rem 0 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.exp-entry {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  padding: 1.1rem 1.2rem;
+  background: #f0f0ec;
+  border-radius: 14px;
+  margin-bottom: .9rem;
+  align-items: start;
+  transition: box-shadow .2s ease;
+}
+.exp-entry:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.07);
+}
+
+/* Date column */
+.exp-date {
+  font-family: var(--mono);
+  font-size: .74rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  text-align: right;
+  padding-top: .15rem;
+}
+.exp-date .dash {
+  color: var(--text-muted);
+}
+
+/* Body */
+.exp-body h3 {
+  font-size: .98rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+.exp-org {
+  font-size: .86rem;
+  color: var(--text-mid);
+  margin-top: .15rem;
+  font-weight: 500;
+}
+.exp-sup {
+  font-size: .8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: .1rem;
+}
+.exp-gpa {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--accent);
+  margin-top: .35rem;
+}
+
+/* Bullet list */
+.exp-list {
+  list-style: none;
+  margin-top: .7rem;
+}
+.exp-list li {
+  position: relative;
+  font-size: .85rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  padding-left: 1rem;
+  margin-bottom: .45rem;
+}
+.exp-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.exp-list li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Small inline paper badges */
+.mini-badge {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: .1rem .45rem;
+  border-radius: 4px;
+  margin-left: .25rem;
+  white-space: nowrap;
+  transition: all .2s;
+}
+.mini-badge:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .exp-entry {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+  .exp-date {
+    text-align: left;
+  }
+  .exp-date br { display: none; }
+  .exp-date .dash { margin: 0 .2rem; }
+}

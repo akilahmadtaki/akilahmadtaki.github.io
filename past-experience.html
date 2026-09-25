@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Past Experience — Akil Ahmad Taki</title>
+<title>Experience — Akil Ahmad Taki</title>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="experience.css">
 </head>
 <body>
 
@@ -26,128 +28,138 @@
 <div class="container">
 
   <div class="page-header">
-    <h1>Past Experience</h1>
-    <p>Research experience, education, and technical skills.</p>
+    <h1>Experience</h1>
+    <p>Research positions, collaborations, and academic training. Roles and affiliations are stated explicitly.</p>
   </div>
 
-  <hr>
+  <!-- ══════════ RESEARCH ══════════ -->
+  <h2 class="exp-group">Research</h2>
 
-  <!-- Research Experience -->
-  <section id="research">
-    <h2 class="section-title">Research Experience</h2>
-    <div class="research-item">
-      <h3>DynKronLoRA:Input-Adaptive Parameter-Efficient Fine-Tuning over a Kronecker-Structured High-Rank Substrate
-</h3>
-      <div class="r-meta">Ongoing &middot; EEE, BUET &middot; Supervisor: Prof. Shaikh Anowarul Fattah</div>
-      <p>DynKronLoRA, a parameter-efficient fine-tuning (PEFT) method that combines two ideas — Kronecker-structured weight updates and input-adaptive gating — into a single framework. </p>
+  <div class="exp-entry">
+    <div class="exp-date">Jun 2023<br><span class="dash">&ndash;</span><br>Present</div>
+    <div class="exp-body">
+      <h3>Thesis Research</h3>
+      <div class="exp-org">Department of EEE, BUET</div>
+      <div class="exp-sup">Supervised by Dr. Shaikh Anowarul Fattah</div>
+      <ul class="exp-list">
+        <li><strong>M.Sc. Thesis (KronLoRA):</strong> Kronecker-decomposed parameter-efficient fine-tuning achieving 4&times; compression over LoRA.</li>
+        <li><strong>LOOPE:</strong> learnable optimal patch ordering for ViT positional embeddings.
+          <a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank" class="mini-badge">CVPR Findings 2026</a>
+        </li>
+        <li><strong>B.Sc. Thesis (AGFN):</strong> attention-gated multi-axial fusion for 3D brain MRI lesion segmentation.
+          <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534354" target="_blank" class="mini-badge">ICEEICT 2024</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="research-item">
-      <h3>LOOPE: Learnable Optimal Patch Order in Positional Embeddings for Vision Transformers</h3>
-      <div class="r-meta">Ongoing &middot; EEE, BUET &middot; Supervisor: Prof. Shaikh Anowarul Fattah</div>
-      <p>Proposing a novel method to determine optimal patch ordering for spatial position embeddings in ViTs, ensuring minimal loss of positional information with computational efficiency.</p>
+  <div class="exp-entry">
+    <div class="exp-date">Feb 2025<br><span class="dash">&ndash;</span><br>Present</div>
+    <div class="exp-body">
+      <h3>Research Assistant (Remote)</h3>
+      <div class="exp-org">University of Tennessee, Knoxville</div>
+      <div class="exp-sup">Supervised by Dr. Fnu Suya, Dept. of ECE</div>
+      <ul class="exp-list">
+        <li><strong>ProxMatch:</strong> feature-space proximity to labeled data for calibrated pseudo-label selection in semi-supervised learning.
+          <a href="https://iclr.cc/Conferences/2027" target="_blank" class="mini-badge">Submitted: ICLR 2027</a>
+        </li>
+        <li><strong>Style-Induced Overthinking:</strong> stylistic prompt reframing inflates reasoning-model chain-of-thought length, exposing inference compute as an attack surface.
+          <a href="https://cvpr.thecvf.com/Conferences/2027" target="_blank" class="mini-badge">Targeting: CVPR 2027</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="research-item">
-      <h3>Demystifying Calibration in Semi-Supervised Learning</h3>
-      <div class="r-meta">Ongoing &middot; University of Tennessee, Knoxville &middot; Supervisor: Dr. Fnu Suya</div>
-      <p>Investigating selection of unlabeled data points based on proximity to labeled data in feature space to improve prediction confidence in semi-supervised settings.</p>
+  <div class="exp-entry">
+    <div class="exp-date">Aug 2024<br><span class="dash">&ndash;</span><br>Jun 2025</div>
+    <div class="exp-body">
+      <h3>Research Collaborator</h3>
+      <div class="exp-org">Dept. of EEE, Daffodil International University</div>
+      <div class="exp-sup">Supervised by Dr. Md. Ashraful Haque</div>
+      <ul class="exp-list">
+        <li>Built a meta-learner-based stacked ensemble to predict and optimize performance of THz MIMO antennas for 6G communication.
+          <a href="https://doi.org/10.1038/s41598-025-88174-2" target="_blank" class="mini-badge">Scientific Reports 2025</a>
+          <a href="https://doi.org/10.1016/j.rineng.2025.105882" target="_blank" class="mini-badge">Results in Engineering 2025</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="research-item">
-      <h3>Performance Prediction of MIMO Antenna for 6G Communication Using ML</h3>
-      <div class="r-meta">Aug 2024 – Jun 2025 &middot; EEE, DIU &middot; Supervisor: Md. Ashraful Haque</div>
-      <p>Developed compact dual-band MIMO antenna for 6G THz communication; implemented meta learner-based stacked generalization ensemble with neural network base learner.</p>
+  <div class="exp-entry">
+    <div class="exp-date">Mar 2024</div>
+    <div class="exp-body">
+      <h3>Team Member, IEEE VIP Cup 2024</h3>
+      <div class="exp-org">Isfahan University of Medical Sciences</div>
+      <div class="exp-sup">Supervised by Dr. Hafiz Imtiaz, EEE, BUET</div>
+      <ul class="exp-list">
+        <li>Developed <strong>Checkerboard Denoising</strong> for speckle removal in OCT images while preserving anatomical detail, and applied <strong>Deep Image Prior</strong> for super-resolution.
+          <a href="https://doi.org/10.48550/arXiv.2411.19549" target="_blank" class="mini-badge">Preprint</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="research-item">
-      <h3>Attention Gated 3D Fusion Network for Multi-Perspective Brain MRI Lesion Segmentation</h3>
-      <div class="r-meta">Jun 2023 – Jul 2024 &middot; IRAB, BUET (Undergraduate Thesis) &middot; Supervisor: Prof. Shaikh Anowarul Fattah</div>
-      <p>Proposed a shallow multi-axis fusion network with attention mechanism (AGFN) for fusing 2D segmentation results and extracting 3D information. Introduced slice classifier to address class imbalance.</p>
+  <!-- ══════════ EDUCATION ══════════ -->
+  <h2 class="exp-group">Education</h2>
+
+  <div class="exp-entry">
+    <div class="exp-date">Oct 2024<br><span class="dash">&ndash;</span><br>Present</div>
+    <div class="exp-body">
+      <h3>M.Sc. in Communication &amp; Signal Processing</h3>
+      <div class="exp-org">Bangladesh University of Engineering and Technology (BUET)</div>
+      <div class="exp-gpa">CGPA 4.00 / 4.00</div>
     </div>
+  </div>
 
-    <div class="research-item">
-      <h3>IEEE VIP CUP — Checkerboard Denoising for OCT Images</h3>
-      <div class="r-meta">Mar 2024 &middot; Isfahan University of Medical Sciences &middot; Supervisor: Dr. Hafiz Imtiaz</div>
-      <p>Developed Checkerboard Denoising method for speckle noise removal in OCT images; applied Deep Image Prior for super-resolution in ophthalmology and cardiology imaging.</p>
+  <div class="exp-entry">
+    <div class="exp-date">Apr 2019<br><span class="dash">&ndash;</span><br>Jul 2024</div>
+    <div class="exp-body">
+      <h3>B.Sc. in Electrical and Electronic Engineering</h3>
+      <div class="exp-org">Bangladesh University of Engineering and Technology (BUET)</div>
+      <div class="exp-gpa">CGPA 3.85 / 4.00</div>
     </div>
-  </section>
+  </div>
 
-  <hr>
+  <!-- ══════════ SKILLS ══════════ -->
+  <h2 class="exp-group">Technical Skills</h2>
 
-  <!-- Education -->
-  <section id="education">
-    <h2 class="section-title">Education</h2>
-
-    <div class="edu-item">
-      <div>
-        <h3>Bangladesh University of Engineering and Technology (BUET)</h3>
-        <div class="edu-degree">M.Sc. in Communication &amp; Signal Processing &middot; Oct 2024 – Ongoing</div>
-      </div>
-      <div class="edu-gpa">4.00 / 4.00</div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <p>C, C++, Python, System Verilog, MATLAB, Assembly</p>
     </div>
-
-    <div class="edu-item">
-      <div>
-        <h3>Bangladesh University of Engineering and Technology (BUET)</h3>
-        <div class="edu-degree">B.Sc. in Electrical and Electronic Engineering &middot; Apr 2019 – Jul 2024</div>
-      </div>
-      <div class="edu-gpa">3.85 / 4.00</div>
+    <div class="skill-group">
+      <h3>Frameworks &amp; Tools</h3>
+      <p>PyTorch, TensorFlow, VS Code, Kaggle, Lightning AI</p>
     </div>
-  </section>
-
-
-
-    </section>
-
-  <hr>
-
-  <!-- Leadership & Service -->
-  <section id="service">
-    <h2 class="section-title">Leadership &amp; Voluntary Service</h2>
-    <ul class="award-list">
-      <li>IEEE BDS Conferences Management Committee Member</li>
-      <li>IEEE Signal Processing Society, BUET SB Chapter (Apr 2022 – Jul 2024)</li>
-      <li>Badhan (Blood Donation Organization), BUET Zone — Volunteer, Sher-e-Bangla Hall (Apr 2019 – May 2024)</li>
-    </ul>
-  </section>
-
-  <!-- Visitor Map -->
-  <hr>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2 class="section-title">Technical Skills</h2>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <p>C, C++, Python, System Verilog, MATLAB, Assembly</p>
-      </div>
-      <div class="skill-group">
-        <h3>Frameworks &amp; Tools</h3>
-        <p>PyTorch, TensorFlow, VS Code, Kaggle, Lightning AI</p>
-      </div>
-      <div class="skill-group">
-        <h3>Simulation</h3>
-        <p>PSpice, Simulink, AutoCAD, Quartus, CISCO</p>
-      </div>
-      <div class="skill-group">
-        <h3>Writing &amp; Graphics</h3>
-        <p>LaTeX</p>
-      </div>
+    <div class="skill-group">
+      <h3>Simulation</h3>
+      <p>PSpice, Simulink, AutoCAD, Quartus, CISCO</p>
     </div>
-  </section>
+    <div class="skill-group">
+      <h3>Writing &amp; Graphics</h3>
+      <p>LaTeX</p>
+    </div>
+  </div>
+
+  <!-- ══════════ SERVICE ══════════ -->
+  <h2 class="exp-group">Leadership &amp; Voluntary Service</h2>
+
+  <ul class="award-list">
+    <li>ATS ,IEEE BDS Conferences Management Committee Member</li>
+    <li>IEEE Signal Processing Society, BUET SB Chapter (Apr 2022 &ndash; Jul 2024)</li>
+    <li>Badhan (Blood Donation Organization), BUET Zone &mdash; Volunteer, Sher-e-Bangla Hall (Apr 2019 &ndash; May 2024)</li>
+  </ul>
 
   <!-- Visitor Map -->
   <div class="visitor-map">
     <h3>Visitors</h3>
-    <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=600&t=tt&d=jR6fj13NhyLnA9VMMH3swhSYmRGX4lCrfzyeFAedrFA&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=000000&w=800&t=n&d=4zmxsecRHGD5eDYR2ypuUjG4uauy2ut8uDnkuDLKRHQ&co=f0f0ec&ct=443636"></script>
   </div>
 
-  <div class="home-footer">
-  Copyright &copy; 2026 Akil Ahmad Taki. Last updated: March 2026.
-</div>
+  <footer>
+    Copyright &copy; 2025 Akil Ahmad Taki. Last updated: Sep. 2026.
+  </footer>
 
 </div>
 
