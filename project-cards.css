@@ -1,0 +1,119 @@
+/* ══════════════════════════════════════
+   PROJECT CARD GRID
+   Paste this at the END of your style.css
+   ══════════════════════════════════════ */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: #f0f0ec;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* Thumbnail area */
+.card-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #e3eaf3, #eae7e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-thumb .thumb-icon {
+  font-size: 2.5rem;
+  opacity: .55;
+}
+
+/* Card body */
+.card-body {
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-body h3 {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+.card-body p {
+  font-size: .82rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-top: .4rem;
+  flex: 1;
+}
+
+/* Tech tags */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .7rem;
+}
+.card-tags .tag {
+  font-size: .68rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(21,87,176,.08);
+  padding: .18rem .5rem;
+  border-radius: 4px;
+}
+
+/* Links row */
+.card-links {
+  display: flex;
+  gap: .5rem;
+  margin-top: .75rem;
+}
+.card-links a {
+  font-size: .74rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: .2rem .65rem;
+  border-radius: 5px;
+  transition: all .2s;
+}
+.card-links a:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Supervisor / course line */
+.card-meta {
+  font-size: .72rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: .7rem;
+  padding-top: .6rem;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

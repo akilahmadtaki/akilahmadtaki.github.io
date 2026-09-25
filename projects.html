@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects — Akil Ahmad Taki</title>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project-cards.css">
 </head>
 <body>
 
@@ -26,68 +28,147 @@
 
   <div class="page-header">
     <h1>Projects</h1>
-    <p>Academic and course-based projects involving deep learning, embedded systems, and robotics.</p>
+    <p>Academic and course-based projects in deep learning, signal processing, embedded systems, and robotics. The complete archive is available on <a href="https://github.com/akilahmadtaki" target="_blank">GitHub</a>.</p>
   </div>
 
-  <hr>
+  <!-- ════ PROJECT GRID ════ -->
+  <div class="project-grid">
 
-  <section id="projects">
-
-    <div class="project-item">
-      <h3>Automated Classification of Harmful Brain Activity Using EEG with Deep Learning</h3>
-      <div class="p-tech">Python &middot; Deep Learning &middot; PyTorch</div>
-      <p>Developed an architecture capable of accurately classifying abnormal brain activity in EEG data using the HMS — Harmful Brain Activity Classification Dataset from Harvard Medical School.</p>
-      <div class="p-supervisor">Instructor: Dr. Mohammad Ariful Haque, Professor, EEE, BUET — Deep Learning Course</div>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="card-thumb">
+        <!-- Replace with: <img src="images/eeg.jpg" alt="EEG Project"> -->
+        <span class="thumb-icon">&#129504;</span>
+      </div>
+      <div class="card-body">
+        <h3>Harmful Brain Activity Classification</h3>
+        <p>Developed a deep learning architecture to accurately classify abnormal brain activity in EEG data using the HMS dataset from Harvard Medical School.</p>
+        <div class="card-tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Deep Learning</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Code</a>
+        </div>
+        <div class="card-meta">Dr. Mohammad Ariful Haque &middot; Deep Learning Course, BUET</div>
+      </div>
     </div>
 
-    <div class="project-item">
-      <h3>Speaker Recognition Using Deep Learning in MATLAB</h3>
-      <div class="p-tech">Python &middot; CNN &middot; Deep Learning &middot; TensorFlow</div>
-      <p>Developed a model capable of accurately predicting an individual's identity based on their voice. Trained using a comprehensive range of fundamental audio features.</p>
-      <div class="p-supervisor">Instructor: Dr. S. M. Mahbubur Rahman, Professor, EEE, BUET — Digital Signal Processing Lab; Group Project</div>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="card-thumb">
+        <span class="thumb-icon">&#127897;&#65039;</span>
+      </div>
+      <div class="card-body">
+        <h3>Speaker Recognition using Deep Learning</h3>
+        <p>Built a CNN-based model that predicts an individual's identity from their voice, trained on a comprehensive range of fundamental audio features.</p>
+        <div class="card-tags">
+          <span class="tag">TensorFlow</span>
+          <span class="tag">CNN</span>
+          <span class="tag">MATLAB</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Code</a>
+        </div>
+        <div class="card-meta">Dr. S. M. Mahbubur Rahman &middot; DSP Lab, BUET</div>
+      </div>
     </div>
 
-    <div class="project-item">
-      <h3>A Basic Mechanical Braille Cell Using FPGA</h3>
-      <div class="p-tech">System Verilog &middot; FPGA</div>
-      <p>Used an FPGA board with a PS2 port to receive keyboard input, converting scan codes to ASCII codes to control servo motors for Braille cell output.</p>
-      <div class="p-supervisor">Instructor: Nafis Sadik, Lecturer, EEE, BUET — Digital Electronics Lab; Group Project</div>
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="card-thumb">
+        <span class="thumb-icon">&#10287;</span>
+      </div>
+      <div class="card-body">
+        <h3>Mechanical Braille Cell using FPGA</h3>
+        <p>Used an FPGA board with a PS2 keyboard interface, converting scan codes to ASCII and driving servo motors to render Braille characters mechanically.</p>
+        <div class="card-tags">
+          <span class="tag">System Verilog</span>
+          <span class="tag">FPGA</span>
+          <span class="tag">Quartus</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Code</a>
+        </div>
+        <div class="card-meta">Nafis Sadik &middot; Digital Electronics Lab, BUET</div>
+      </div>
     </div>
 
-    <div class="project-item">
-      <h3>Automatic Door and Window Monitoring System for Smart Home</h3>
-      <div class="p-tech">Arduino &middot; Digital Logic &middot; Magnetic Sensor</div>
-      <p>Built a sensor-based system to detect open/closed states of doors and windows. Data is transmitted wirelessly to a central server, with a dedicated mobile app for real-time monitoring and unauthorized access alerts.</p>
-      <div class="p-supervisor">Instructor: Dr. Celia Shahnaz, Professor, EEE, BUET — Robotics and Automation Lab; Group Project</div>
+    <!-- Project 4 -->
+    <div class="project-card">
+      <div class="card-thumb">
+        <span class="thumb-icon">&#127968;</span>
+      </div>
+      <div class="card-body">
+        <h3>Smart Home Door &amp; Window Monitor</h3>
+        <p>Sensor-based system detecting open/closed states, transmitting wirelessly to a central server, with a mobile app for real-time monitoring and intrusion alerts.</p>
+        <div class="card-tags">
+          <span class="tag">Arduino</span>
+          <span class="tag">IoT</span>
+          <span class="tag">Sensors</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Code</a>
+        </div>
+        <div class="card-meta">Dr. Celia Shahnaz &middot; Robotics &amp; Automation Lab, BUET</div>
+      </div>
     </div>
 
-    <div class="project-item">
-      <h3>Self-Balancing Robot</h3>
-      <div class="p-tech">Arduino &middot; PID Control &middot; Feedback Systems</div>
-      <p>Developed a robust mechanical framework with essential electronic elements for stability and control. Movement is precisely controlled using pulse-driven stepper motors without feedback loops.</p>
-      <div class="p-supervisor">Instructor: Safin Bin Hamid, Lecturer, EEE, BUET — Control System Lab; Group Project</div>
+    <!-- Project 5 -->
+    <div class="project-card">
+      <div class="card-thumb">
+        <span class="thumb-icon">&#129302;</span>
+      </div>
+      <div class="card-body">
+        <h3>Self-Balancing Robot</h3>
+        <p>Designed a robust mechanical framework with micro-stepping motors and PID control for precise stability. Published at IEEE RAAICON 2024.</p>
+        <div class="card-tags">
+          <span class="tag">Arduino</span>
+          <span class="tag">PID Control</span>
+          <span class="tag">Feedback</span>
+        </div>
+        <div class="card-links">
+          <a href="https://doi.org/10.1109/RAAICON64172.2024.10928610" target="_blank">Paper</a>
+          <a href="#" target="_blank">Code</a>
+        </div>
+        <div class="card-meta">Safin Bin Hamid &middot; Control System Lab, BUET</div>
+      </div>
     </div>
 
-    <div class="project-item">
-      <h3>Wirelessly Controlled 6 Degree of Freedom Robotic Arm</h3>
-      <div class="p-tech">Arduino &middot; PID Control &middot; Wireless Communication</div>
-      <p>Developed a wirelessly controlled robotic arm system using Arduino with PID control for precise motion across 6 degrees of freedom.</p>
-      <div class="p-supervisor">Instructor: Dr. Md. Farhad Hossain, Professor, EEE, BUET — Communication System Lab; Group Project</div>
+    <!-- Project 6 -->
+    <div class="project-card">
+      <div class="card-thumb">
+        <span class="thumb-icon">&#129470;</span>
+      </div>
+      <div class="card-body">
+        <h3>6-DOF Wireless Robotic Arm</h3>
+        <p>Developed a wirelessly controlled robotic arm using Arduino with PID control for precise motion across six degrees of freedom.</p>
+        <div class="card-tags">
+          <span class="tag">Arduino</span>
+          <span class="tag">PID Control</span>
+          <span class="tag">Wireless</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Code</a>
+        </div>
+        <div class="card-meta">Dr. Md. Farhad Hossain &middot; Communication System Lab, BUET</div>
+      </div>
     </div>
 
-  </section>
+  </div>
 
   <!-- Visitor Map -->
   <div class="visitor-map">
     <h3>Visitors</h3>
-    <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=600&t=tt&d=jR6fj13NhyLnA9VMMH3swhSYmRGX4lCrfzyeFAedrFA&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=000000&w=800&t=n&d=4zmxsecRHGD5eDYR2ypuUjG4uauy2ut8uDnkuDLKRHQ&co=f0f0ec&ct=443636"></script>
   </div>
 
-  <div class="home-footer">
-  Copyright &copy; 2025 Akil Ahmad Taki. Last updated: May 2026.
-</div>
+  <footer>
+    Copyright &copy; 2025 Akil Ahmad Taki. Last updated: Sep. 2026.
+  </footer>
 
 </div>
-  
+
 </body>
 </html>
