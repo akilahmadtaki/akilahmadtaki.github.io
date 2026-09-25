@@ -59,3 +59,12 @@
   .interest-list { columns: 1; }
   .main-content .pub-entry { grid-template-columns: 1fr; }
 }
+/* Visitor map fits the content column */
+.main-content .visitor-map {
+  overflow-x: auto;
+}
+.main-content .visitor-map img,
+.main-content .visitor-map canvas {
+  max-width: 100%;
+  height: auto;
+}
