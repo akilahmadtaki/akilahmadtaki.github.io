@@ -1,0 +1,132 @@
+/* ══════════════════════════════════════
+   PUBLICATIONS PAGE
+   ══════════════════════════════════════ */
+
+.year-heading {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 2rem 0 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.pub-entry {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.25rem;
+  padding: 1.1rem;
+  background: #f0f0ec;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  align-items: start;
+  transition: box-shadow .2s ease;
+}
+.pub-entry:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.07);
+}
+
+/* Thumbnail */
+.pub-thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e3eaf3, #eae7e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pub-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pub-thumb .thumb-icon {
+  font-size: 2rem;
+  opacity: .5;
+}
+
+/* Content */
+.pub-content h3 {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+.pub-auth {
+  font-size: .83rem;
+  color: var(--text-mid);
+  margin-top: .3rem;
+  line-height: 1.55;
+}
+.pub-auth em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--text);
+}
+.pub-place {
+  font-size: .8rem;
+  color: var(--text-light);
+  margin-top: .2rem;
+}
+
+/* Badges */
+.pub-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .7rem;
+}
+.badge {
+  font-size: .73rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  padding: .18rem .6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all .2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.badge:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+.badge.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Abstract (hidden by default) */
+.pub-abstract {
+  display: none;
+  font-size: .82rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  margin-top: .75rem;
+  padding: .75rem .9rem;
+  background: rgba(255,255,255,.7);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  text-align: justify;
+}
+.pub-abstract.open {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .pub-entry {
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+  .pub-thumb {
+    aspect-ratio: 16/9;
+  }
+}
