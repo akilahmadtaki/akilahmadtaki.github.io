@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="publications.css">
 <link rel="stylesheet" href="about.css">
 </head>
 <body>
@@ -121,10 +122,13 @@
       <a href="https://www.buet.ac.bd/" target="_blank">Bangladesh University of Engineering and Technology (BUET)</a>,
       currently maintaining a <strong>CGPA of 4.00/4.00</strong>. I also serve as a Lecturer in the Department of EEE at the
       <a href="https://www.uap-bd.edu/" target="_blank">University of Asia Pacific</a>.
-      I am investigating parameter-efficient methods for leveraging pretrained models under the supervision of
+      My research interests broadly span <strong>Computer Vision</strong>,
+      <strong>Applied Machine Learning / Deep Learning</strong>,
+      <strong>Large Language Models</strong>, and <strong>Generative AI</strong>.
+      I am currently investigating parameter-efficient methods for leveraging pretrained models under the supervision of
       <a href="https://eee.buet.ac.bd/faculty/dr-shaikh-anowarul-fattah/" target="_blank">Prof. Shaikh Anowarul Fattah</a>
-      at BUET, and work as a remote research assistant in
-      <a href="#" target="_blank">Dr. Fnu Suya</a>'s lab at the University of Tennessee, Knoxville.
+      at BUET. I also work as a remote research assistant in
+      <a href="https://fsuya.org/" target="_blank">Dr. Fnu Suya</a>'s lab at the University of Tennessee, Knoxville.
     </p>
 
     <p class="about-text">
@@ -135,62 +139,110 @@
     </p>
 
     <!-- ══ Research Interests Box ══ -->
-        <!-- ══ Research Interests Box ══ -->
     <div class="interest-box">
-      <h2 class="interest-title">Research Interests</h2>
-      <div class="interest-tags">
-        <!-- <span class="i-tag">Parameter-Efficient Fine-Tuning</span> -->
-        <!-- <span class="i-tag">Semi-Supervised Learning</span> -->
-        <span class="i-tag">Computer Vision</span>
-        <!-- <span class="i-tag">Vision Transformers</span> -->
-        <!-- <span class="i-tag">Medical Image Analysis</span> -->
-        <span class="i-tag">Computational Imaging</span>
-        <span class="i-tag">Generative AI </span>
-        <span class="i-tag">Large Language Models</span>
+      <h2 class="interest-title">Interests</h2>
+      <ul class="interest-list">
+        <!-- <li>Parameter-efficient fine-tuning</li> -->
+        <!-- <li>Semi-supervised learning</li> -->
+        <li>Computer vision </li>
+        <!-- <li>Medical image analysis</li> -->
+        <li>Computational imaging</li>
+        <li>Large language models</li>
+        <li>Generative AI</li>
+        <li>Reinforcement learning</li>
 
-        <span class="i-tag">Reinforcement Learning</span>
-      </div>
+      </ul>
     </div>
 
     <!-- ══ Selected Publications ══ -->
     <h2 class="section-title">Selected Publications</h2>
-    
-     <div class="pub-item">
-      <h3><a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank">LOOPE: Learnable Optimal Patch Order in Positional Embeddings for Vision Transformers</a></h3>
-      <p class="pub-authors">M. A. M. Chowdhury, M. R. U. Rahman, <span class="me">A. A. Taki</span></p>
-      <p class="pub-venue">CVPR Findings, 2026</p>
-      <div class="pub-links"><a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank">[OpenReview]</a></div>
+    <p class="viewall-link"><a href="publications.html">View all publications &rarr;</a></p>
+
+    <div class="pub-entry">
+      <div class="pub-thumb">
+        <img src="images/op1.png" alt="Diffractive optical networks">
+      </div>
+      <div class="pub-content">
+        <h3>Diffractive Networks Learn Imagers, not Inverses</h3>
+        <p class="pub-auth"><em>A. A. Taki</em>, S. A. Fattah, M. Saquib</p>
+        <p class="pub-place"><em>Under review at IEEE ICASSP 2027</em></p>
+        <div class="pub-badges">
+          <button class="badge abs-btn" onclick="toggleAbs(this)">Abs</button>
+        </div>
+        <div class="pub-abstract">
+          We show that diffractive optical networks trained for reconstruction through random phase diffusers learn generic imaging operators rather than diffuser-specific inverses, using trainable phase-only layers and differentiable wave propagation.
+        </div>
+      </div>
     </div>
 
-    <div class="pub-item">
-      <h3>Diffractive Networks Learn Imagers, not Inverses</h3>
-      <p class="pub-authors"><span class="me">A. A. Taki</span>, S. A. Fattah, M. Saquib</p>
-      <p class="pub-venue">Under review at IEEE ICASSP 2027</p>
+    <div class="pub-entry">
+      <div class="pub-thumb">
+        <img src="images/pm1.png" alt="ProxMatch semi-supervised learning">
+      </div>
+      <div class="pub-content">
+        <h3>ProxMatch: Feature Space Proximity for Calibrated Pseudo-Label Propagation in Semi-Supervised Learning</h3>
+        <p class="pub-auth"><em>A. A. Taki</em>, W. Aspen, F. Suya</p>
+        <p class="pub-place"><em>Under review</em></p>
+        <div class="pub-badges">
+          <button class="badge abs-btn" onclick="toggleAbs(this)">Abs</button>
+        </div>
+        <div class="pub-abstract">
+          Unlabeled data points should be selected for training only when they lie close to labeled points in feature space, as proximity indicates higher prediction confidence. We use this principle to calibrate pseudo-label propagation in semi-supervised learning.
+        </div>
+      </div>
     </div>
 
-    <div class="pub-item">
-      <h3>ProxMatch: Feature Space Proximity for Calibrated Pseudo-Label Propagation in Semi-Supervised Learning</h3>
-      <p class="pub-authors"><span class="me">A. A. Taki</span>, W. Aspen, F. Suya</p>
-      <p class="pub-venue">Under review</p>
+    <div class="pub-entry">
+      <div class="pub-thumb">
+        <img src="images/rb1.png" alt="RBMatch building footprint extraction">
+      </div>
+      <div class="pub-content">
+        <h3>RBMatch: Dual-Level Class Rebalancing for Semi-Supervised Building Footprint Extraction</h3>
+        <p class="pub-auth"><em>A. A. Taki</em>, S. A. Fattah</p>
+        <p class="pub-place"><em>Under review at IEEE Geoscience and Remote Sensing Letters (GRSL)</em></p>
+        <div class="pub-badges">
+          <button class="badge abs-btn" onclick="toggleAbs(this)">Abs</button>
+        </div>
+        <div class="pub-abstract">
+          A class-rebalancing self-training framework for semi-supervised building footprint extraction, combining adaptive thresholding, confidence-aware loss reweighting, and distribution alignment at both pixel and image levels.
+        </div>
+      </div>
     </div>
 
-    <div class="pub-item">
-      <h3>RBMatch: Dual-Level Class Rebalancing for Semi-Supervised Building Footprint Extraction</h3>
-      <p class="pub-authors"><span class="me">A. A. Taki</span>, S. A. Fattah</p>
-      <p class="pub-venue">Under review at IEEE Geoscience and Remote Sensing Letters (GRSL)</p>
+    <div class="pub-entry">
+      <div class="pub-thumb">
+        <img src="images/mr1.png" alt="Synthetic MRI diffusion augmentation">
+      </div>
+      <div class="pub-content">
+        <h3>Low-Fidelity Synthetic MRI Degrades Rare-Class Classification in Diffusion-Based Augmentation</h3>
+        <p class="pub-auth"><em>A. A. Taki</em>, M. I. H. Bhuiyan</p>
+        <p class="pub-place"><em>Under review at ICCIT 2026</em></p>
+        <div class="pub-badges">
+          <button class="badge abs-btn" onclick="toggleAbs(this)">Abs</button>
+        </div>
+        <div class="pub-abstract">
+          We show that low-fidelity synthetic MRI generated by few-shot adapted diffusion models degrades rare-class classification performance, with LoRA-adapted Stable Diffusion failing to capture MRI global intensity structure that a from-scratch diffusion model resolves.
+        </div>
+      </div>
     </div>
 
-    <div class="pub-item">
-      <h3>Low-Fidelity Synthetic MRI Degrades Rare-Class Classification in Diffusion-Based Augmentation</h3>
-      <p class="pub-authors"><span class="me">A. A. Taki</span>, M. I. H. Bhuiyan</p>
-      <p class="pub-venue">Under review at ICCIT 2026</p>
+    <div class="pub-entry">
+      <div class="pub-thumb">
+        <img src="images/loop1.png" alt="LOOPE positional embeddings">
+      </div>
+      <div class="pub-content">
+        <h3>LOOPE: Learnable Optimal Patch Order in Positional Embeddings for Vision Transformers</h3>
+        <p class="pub-auth">M. A. M. Chowdhury, M. R. U. Rahman, <em>A. A. Taki</em></p>
+        <p class="pub-place"><em>CVPR Findings</em>, 2026</p>
+        <div class="pub-badges">
+          <button class="badge abs-btn" onclick="toggleAbs(this)">Abs</button>
+          <a href="https://doi.org/10.48550/arXiv.2504.14386" target="_blank" class="badge">OpenReview</a>
+        </div>
+        <div class="pub-abstract">
+          We propose a novel method to determine optimal patch ordering for spatial position embeddings in Vision Transformers, ensuring minimal loss of positional information while maintaining computational efficiency. We also introduce a controlled experiment using minimal pixel configurations to analyse the behaviour of different positional encodings.
+        </div>
+      </div>
     </div>
-
-   
-
-    <p style="margin-top:.9rem; font-size:.85rem;">
-      <a href="publications.html">See all publications &rarr;</a>
-    </p>
 
     <!-- Visitor Map -->
     <div class="visitor-map">
@@ -206,6 +258,14 @@
 <div class="home-footer">
   Copyright &copy; 2025 Akil Ahmad Taki. Last updated: Sep. 2026.
 </div>
+
+<script>
+function toggleAbs(btn) {
+  var abs = btn.closest('.pub-content').querySelector('.pub-abstract');
+  abs.classList.toggle('open');
+  btn.classList.toggle('active');
+}
+</script>
 
 </body>
 </html>

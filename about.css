@@ -1,0 +1,61 @@
+/* ══════════════════════════════════════
+   ABOUT PAGE — Interests box
+   ══════════════════════════════════════ */
+
+.interest-box {
+  background: #e8e8e2;
+  border-radius: 14px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.75rem 0;
+}
+
+.interest-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .6rem;
+  letter-spacing: -.01em;
+}
+
+.interest-list {
+  list-style: none;
+  columns: 2;
+  column-gap: 1.5rem;
+}
+.interest-list li {
+  position: relative;
+  font-size: .87rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  padding-left: 1rem;
+  break-inside: avoid;
+}
+.interest-list li::before {
+  content: '\25AA';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: .7rem;
+}
+
+/* "View all publications" link under the heading */
+.viewall-link {
+  font-size: .82rem;
+  margin: -.5rem 0 .9rem;
+}
+
+/* Home page publication entries sit in a narrower column */
+.main-content .pub-entry {
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: .9rem 1rem;
+}
+.main-content .pub-entry h3 {
+  font-size: .9rem;
+}
+
+@media (max-width: 680px) {
+  .interest-list { columns: 1; }
+  .main-content .pub-entry { grid-template-columns: 1fr; }
+}
