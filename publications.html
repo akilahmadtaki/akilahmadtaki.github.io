@@ -35,6 +35,23 @@
   <!-- ══════════ UNDER REVIEW ══════════ -->
   <h2 class="year-heading">2026</h2>
 
+    <div class="pub-entry">
+    <div class="pub-thumb">
+      <img src="images/dylora.png" alt="DynKronLoRA Kronecker adapters">
+    </div>
+    <div class="pub-content">
+      <h3>Parameter-Efficient Fine-Tuning with Input-Gated Kronecker Adapters and Exact Rank Control</h3>
+      <p class="pub-auth"><em>A. A. Taki</em>, S. A. Fattah</p>
+      <p class="pub-place"><em>Under review at IEEE Transactions on Artificial Intelligence</em></p>
+      <div class="pub-badges">
+        <button class="badge abs-btn" onclick="toggleAbs(this)">Abs</button>
+      </div>
+      <div class="pub-abstract">
+        Parameter-efficient fine-tuning keeps a pretrained model frozen and trains a small update instead, with the rank of that update fixed in advance and spent equally on every input. We present DynKronLoRA, which places the gate on a frozen random Kronecker factor rather than a low-rank one, so a single gate unit controls many units of rank. The construction yields the realized rank exactly rather than as a bound, and with it the resolution of the gate: input conditioning can help only where per-input rank demand varies by more than one step of that resolution, and both quantities are measurable on the pretrained model before training. Across six medical imaging and language tasks, the Kronecker substrate carries the accuracy advantage at seven to nine times fewer trainable parameters than low-rank adaptation, and the measurement identifies the tasks that repay input conditioning in all six cases.
+      </div>
+    </div>
+  </div>
+
   <div class="pub-entry">
     <div class="pub-thumb">
       <img src="images/op1.png" alt="Diffractive optical networks">

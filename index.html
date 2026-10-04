@@ -120,8 +120,7 @@
     <p class="about-text">
       Hello! I am a M.Sc. student in Communication &amp; Signal Processing at
       <a href="https://www.buet.ac.bd/" target="_blank">Bangladesh University of Engineering and Technology (BUET)</a>,
-      currently maintaining a <strong>CGPA of 4.00/4.00</strong>. I also serve as a Lecturer in the Department of EEE at the
-      <a href="https://www.uap-bd.edu/" target="_blank">University of Asia Pacific</a>.
+      currently maintaining a <strong>CGPA of 4.00/4.00</strong>. I also serve as <strong> Lecturer</strong> in the Department of EEE at the University of Asia Pacific.
       My research interests broadly span <strong>Computer Vision</strong>,
       <strong>Applied Machine Learning / Deep Learning</strong>,
       <strong>Large Language Models</strong>, and <strong>Generative AI</strong>.
@@ -157,6 +156,24 @@
     <!-- ══ Selected Publications ══ -->
     <h2 class="section-title">Selected Publications</h2>
     <p class="viewall-link"><a href="publications.html">View all publications &rarr;</a></p>
+
+
+    <div class="pub-entry">
+      <div class="pub-thumb">
+        <img src="images/dylora.png" alt="DynKronLoRA Kronecker adapters">
+      </div>
+      <div class="pub-content">
+        <h3>Parameter-Efficient Fine-Tuning with Input-Gated Kronecker Adapters and Exact Rank Control</h3>
+        <p class="pub-auth"><em>A. A. Taki</em>, S. A. Fattah</p>
+        <p class="pub-place"><em>Under review at IEEE Transactions on Artificial Intelligence</em></p>
+        <div class="pub-badges">
+          <button class="badge abs-btn" onclick="toggleAbs(this)">Abs</button>
+        </div>
+        <div class="pub-abstract">
+          Parameter-efficient fine-tuning keeps a pretrained model frozen and trains a small update instead, with the rank of that update fixed in advance and spent equally on every input. We present DynKronLoRA, which places the gate on a frozen random Kronecker factor rather than a low-rank one, so a single gate unit controls many units of rank. The construction yields the realized rank exactly rather than as a bound, and with it the resolution of the gate: input conditioning can help only where per-input rank demand varies by more than one step of that resolution, and both quantities are measurable on the pretrained model before training. Across six medical imaging and language tasks, the Kronecker substrate carries the accuracy advantage at seven to nine times fewer trainable parameters than low-rank adaptation, and the measurement identifies the tasks that repay input conditioning in all six cases.
+        </div>
+      </div>
+    </div>
 
     <div class="pub-entry">
       <div class="pub-thumb">
@@ -256,7 +273,7 @@
 
 <!-- Footer -->
 <div class="home-footer">
-  Copyright &copy; 2025 Akil Ahmad Taki. Last updated: Sep. 2026.
+  Copyright &copy; 2025 Akil Ahmad Taki. Last updated: Aug. 2026.
 </div>
 
 <script>
